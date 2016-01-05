@@ -9,7 +9,11 @@ class ContactMailer < ApplicationMailer
     @message = message
     @user_email = user_email
     @user_name = user_name
-    mail(to: "testiemactesterson@gmail.com", subject: 'Contact from TB Site')
+    mail(
+      to: "testiemactesterson@gmail.com",
+      subject: 'Contact from TB Site',
+      sender: @user_email
+    )
   end
 
 end
